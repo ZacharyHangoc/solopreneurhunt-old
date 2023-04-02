@@ -12,6 +12,7 @@ import {
   Button,
   Heading,
   Text,
+  Link,
 } from "@chakra-ui/react";
 
 import { TriangleUpIcon } from "@chakra-ui/icons";
@@ -35,19 +36,21 @@ export default function Course(props: any) {
         alt="Caffe Latte"
       />
 
-      <Stack>
-        <CardBody>
+      <CardBody>
+        <Link href="/course/[slug]">
           <Heading size="md">{props.title}</Heading>
+        </Link>
 
-          <Text py="2">{props.content}</Text>
-        </CardBody>
-      </Stack>
-      <Grid>
+        <Text py="2">{props.content}</Text>
+      </CardBody>
+
+      <Grid m={"auto"} me={"3%"} justifyContent={"center"}>
         <GridItem colStart={4}>
           <IconButton
             aria-label="Upvote"
             icon={<TriangleUpIcon />}
           ></IconButton>
+          <Text>999</Text>
         </GridItem>
       </Grid>
     </Card>

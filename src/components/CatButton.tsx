@@ -2,7 +2,7 @@ import { Button, ButtonProps, Flex } from "@chakra-ui/react";
 
 export default function CatButton(props: ButtonProps) {
   return (
-    <Flex h="20vh" justifyContent="center" alignItems="center">
+    <Flex h="15vh" justifyContent="center" alignItems="center">
       <Button
         {...props}
         /* flex={1} */

@@ -1,15 +1,25 @@
-import { Wrap, Flex, Button } from "@chakra-ui/react";
+import { Wrap, Flex, Button, WrapItem } from "@chakra-ui/react";
 import CatButton from "./CatButton";
+
+const categories = [
+  "Copywriting",
+  "Twitter Growth",
+  "Twitter Monetize",
+  "Indie Hacking",
+  "Storytelling",
+  "SEO",
+];
 export default function Categories() {
   return (
-    <Flex justifyContent={"center"}>
-      <Wrap>
-        <CatButton name="Copywriting" />
-        <CatButton name="Twitter Growth" />
-        <CatButton name="Twitter Monetize" />
-        <CatButton name="Indie Hacking" />
-        <CatButton name="Storytelling" />
-        <CatButton name="Copywriting" />
+    <Flex justifyContent={"center"} m={"0"}>
+      <Wrap m={"0"}>
+        {categories.map((category) => {
+          return (
+            <WrapItem m={"0"}>
+              <CatButton name={category} />
+            </WrapItem>
+          );
+        })}
       </Wrap>
     </Flex>
   );
